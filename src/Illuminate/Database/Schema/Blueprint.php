@@ -1357,12 +1357,11 @@ class Blueprint
      * Create a new multipolygon column on the table.
      *
      * @param  string  $column
-     * @param  int|null  $srid
      * @return \Illuminate\Database\Schema\ColumnDefinition
      */
-    public function multiPolygonZ($column, $srid = null)
+    public function multiPolygonZ($column)
     {
-        return $this->addColumn('multipolygonz', $column, compact('srid'));
+        return $this->addColumn('multipolygonz', $column);
     }
 
     /**
